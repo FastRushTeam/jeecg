@@ -1,4 +1,4 @@
-package org.jeecgframework.core.junit;
+package junit;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,7 +15,7 @@ import org.springframework.web.context.WebApplicationContext;
 @WebAppConfiguration
 @ContextConfiguration(locations = {"classpath*:spring*.xml"})
 @Transactional
-public class AbstractUnitTest {
+public abstract class AbstractUnitTest {
 	@Autowired
 	protected WebApplicationContext wac;
 

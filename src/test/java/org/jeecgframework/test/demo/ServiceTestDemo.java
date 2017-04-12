@@ -1,6 +1,6 @@
 package org.jeecgframework.test.demo;
 
-import org.jeecgframework.core.junit.AbstractUnitTest;
+import junit.AbstractUnitTest;
 import org.jeecgframework.web.system.pojo.base.TSUser;
 import org.jeecgframework.web.system.service.UserService;
 import org.junit.Test;

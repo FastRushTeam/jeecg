@@ -18,8 +18,8 @@
 	</context:component-scan>
 
 	<!-- ApplicationContext -->
-	<bean class="org.jeecgframework.core.util.ApplicationContextUtil"></bean>
-	<bean class="org.jeecgframework.p3.core.utils.common.ApplicationContextUtil"></bean>
+	<bean class="org.jeecgframework.core.util.ApplicationContextUtil"/>
+	<bean class="org.jeecgframework.p3.core.utils.common.ApplicationContextUtil"/>
 
 	<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
 	<bean id="mappingJacksonHttpMessageConverter"
@@ -56,12 +56,8 @@
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		p:defaultEncoding="UTF-8">
-		<property name="maxUploadSize">
-			<value>104857600</value>
-		</property>
-		<property name="maxInMemorySize">
-			<value>4096</value>
-		</property>
+		<property name="maxUploadSize" value="104857600"/>
+		<property name="maxInMemorySize" value="4096"/>
 	</bean>
 
     <!-- Bean解析器,级别高于默认解析器,寻找bean对象进行二次处理 -->
@@ -124,9 +120,7 @@
 
 	<!-- 智能表单配置引入 -->
 	<import resource="classpath*:org/jeecgframework/web/cgform/common/spring-mvc-cgform.xml" />
-	<!--集成cxf webservice接口
-	<import resource="classpath:cxf-servlet.xml" />
-	-->
+	<!--集成cxf webservice接口  <import resource="classpath:cxf-servlet.xml" />-->
 	<!-- jeecg plugin dev -->
 	<import resource="classpath:config/spring-config-p3.xml" />
 </beans>
